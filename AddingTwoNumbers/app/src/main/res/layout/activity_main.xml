@@ -26,11 +26,11 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="150dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="50dp"
-        android:layout_toRightOf="@id/TVId"
-        />
+        android:inputType="number"
+        android:layout_toRightOf="@id/TVId" />
 
     <TextView
         android:id="@+id/TVId2"
@@ -50,11 +50,11 @@
         android:layout_height="50dp"
         android:layout_below="@+id/FirstNumber"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="50dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:layout_toRightOf="@id/TVId"
-        />
+        android:inputType="number"/>
 
     <TextView
         android:id="@+id/PResult"
@@ -90,6 +90,7 @@
         android:layout_marginStart="150dp"
         android:layout_marginTop="450dp"
         android:text="Add"
+        android:onClick="output"
 
         />
 

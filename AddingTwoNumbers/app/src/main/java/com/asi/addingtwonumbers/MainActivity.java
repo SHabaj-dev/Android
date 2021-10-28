@@ -9,39 +9,32 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Button Add;
     EditText tv1, tv2;
 
     TextView tvr;
-    int num1, num2,res;
 
-    String a = "", b = "";
+    Integer num1, num2, result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
 
+    public void output(View v){
+        getData();
 
+        result = num1 + num2;
+        tvr.append(Integer.toString(result));
+    }
 
-        Add = findViewById(R.id.Add);
-        tv1 = findViewById(R.id.FirstNumber);
-        tv2 = findViewById(R.id.SecondNumber);
-        tvr = findViewById(R.id.PResult);
+    public void getData(){
+      tvr = findViewById(R.id.PResult);
+      tv1 = findViewById(R.id.FirstNumber);
+      tv2 = findViewById(R.id.SecondNumber);
+      tvr.setText("");
 
-
-        a = tv1.getText().toString();
-        b = tv2.getText().toString();
-        num1 = Integer.parseInt(a);
-        num2 = Integer.parseInt(b);
-        tvr.setText("");
-
-        Add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                res = num1 + num2;
-                tvr.setText(Integer.toString(res));
-            }
-        });
+      num1 = Integer.parseInt(tv1.getText().toString());
+      num2 = Integer.parseInt(tv1.getText().toString());
     }
 }
