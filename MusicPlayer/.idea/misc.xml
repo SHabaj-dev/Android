@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Programing Practice/andrd/MusicPlayer/app/src/main/res/drawable/ic_baseline_fast_forward_24.xml" value="0.26614583333333336" />
+        <entry key="..\:/Programing Practice/andrd/MusicPlayer/app/src/main/res/drawable/item_background.xml" value="0.26614583333333336" />
         <entry key="..\:/Programing Practice/andrd/MusicPlayer/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Programing Practice/andrd/MusicPlayer/app/src/main/res/layout/activity_player.xml" value="0.25" />
+        <entry key="..\:/Programing Practice/andrd/MusicPlayer/app/src/main/res/layout/item_view.xml" value="0.25" />
+        <entry key="..\:/Programing Practice/andrd/MusicPlayer/app/src/main/res/layout/player_layout.xml" value="0.25" />
       </map>
     </option>
   </component>

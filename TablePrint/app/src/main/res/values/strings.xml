@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Table Print</string>
+    <string name="table_printer">Table Printer</string>
+    <string name="enter_the_number">Enter The Number</string>
+    <string name="show_table">Show Table</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Realm DB</string>
+    <string name="add_new_note">Add New Note</string>
+    <string name="add_note">Add Note</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+    <string name="jan_1_2021">Jan 1 2021</string>
+    <string name="notes">Notes</string>
+</resources>

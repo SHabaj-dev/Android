@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">All Chat</string>
+    <string name="developed_with_love">Developed with ❤️ By</string>
+    <string name="shabaj_ansari">Shabaj Ansari</string>
+    <string name="please_verify_your_number">Please Verify Your Number</string>
+    <string name="msg_text">We Will Send You SMS Message to verify your phone number.Enter your country code and phone number</string>
+    <string name="enter_your_number">Enter Your Number</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="check_otp">Please enter the OTP sent to your number to verify.</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="change_number">Didn\'t Received? Change Number.</string>
+    <string name="save_your_profile">Save Your Profile</string>
+    <string name="enter_user_name">Enter User Name</string>
+    <string name="save">Save</string>
+    <string name="free_chat">Free Chat</string>
+    <string name="chats">Chats</string>
+    <string name="status">Status</string>
+    <string name="calls">Calls</string>
+</resources>
