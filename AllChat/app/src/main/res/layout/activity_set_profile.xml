@@ -19,7 +19,7 @@
         android:layout_marginTop="70dp"/>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/saveID_DP"
+        android:id="@+id/getUserImage"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_centerHorizontal="true"
@@ -37,37 +37,38 @@
     </androidx.cardview.widget.CardView>
 
     <EditText
-        android:id="@+id/et_UserName"
+        android:id="@+id/getUserName"
         android:layout_width="160dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/saveID_DP"
-        android:layout_marginTop="30dp"
+        android:layout_below="@+id/getUserImage"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
         android:hint="@string/enter_user_name"
-        android:textColor="@color/black"
-        android:textAlignment="center"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:textSize="18sp"/>
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 
     <android.widget.Button
-        android:id="@+id/saveIdBtn"
+        android:id="@+id/saveProfileBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/save"
-        android:background="@color/main_theme"
-        android:layout_below="@+id/et_UserName"
-        android:layout_marginTop="20dp"
+        android:layout_below="@+id/getUserName"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/white"/>
+        android:layout_marginTop="20dp"
+        android:background="@color/main_theme"
+        android:text="@string/save"
+        android:textColor="@color/white" />
 
     <ProgressBar
-        android:id="@+id/progressbarSaveProfile"
+        android:id="@+id/progressBarSetProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/saveIdBtn"
+        android:layout_below="@+id/saveProfileBtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"/>
+        android:visibility="invisible"
+        android:layout_marginTop="30dp" />
 
 
 </RelativeLayout>

@@ -41,13 +41,14 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/et_EnterOTP"
+        android:id="@+id/getOtp"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_below="@+id/tv_msgOTP"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:inputType="number"
+        android:textColor="@color/black"
         android:maxLength="6"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -56,39 +57,39 @@
         android:id="@+id/verifyOTPBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/et_EnterOTP"
+        android:layout_below="@+id/getOtp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@color/main_theme"
-        android:text="@string/verify_otp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:paddingRight="15dp"
         android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="@string/verify_otp"
         android:textAlignment="center"
-        android:textSize="15sp" />
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/changeNumber_tv"
+        android:id="@+id/changeNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/verifyOTPBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:textColor="#6b6969"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="@string/change_number"
         android:textAlignment="center"
+        android:textColor="#6b6969"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <ProgressBar
-        android:id="@+id/verifyOTPProgressBar"
+        android:id="@+id/progressBarOTP_Verification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/changeNumber_tv"
+        android:layout_below="@id/changeNumber"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
