@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/background_theme"
     tools:context=".OTP_Verification">
 
     <TextView
@@ -48,8 +48,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:inputType="number"
-        android:textColor="@color/black"
         android:maxLength="6"
+        android:textColor="@color/black"
+        android:background="@drawable/backgroundshapes"
+        android:hint="Please Enter the OTP"
+        android:textAlignment="center"
+        android:padding="5dp"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -60,7 +64,8 @@
         android:layout_below="@+id/getOtp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:background="@color/main_theme"
+        android:background="@drawable/backgroundshapes"
+        android:backgroundTint="@color/main_theme"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:text="@string/verify_otp"
@@ -94,6 +99,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
+        android:visibility="invisible"
         android:layout_marginBottom="20dp" />
 
 </RelativeLayout>

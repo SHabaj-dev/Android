@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/background_theme"
     tools:context=".MainActivity">
 
     <TextView
@@ -41,6 +41,7 @@
         android:layout_below="@+id/tv_messageToUser"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
+        android:background="@drawable/backgroundshapes"
         app:ccp_areaCodeDetectedCountry="true"
         app:ccp_autoDetectCountry="true" />
 
@@ -51,12 +52,13 @@
         android:layout_below="@id/countryCodePicker"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:background="#9c9898"
+        android:background="@drawable/backgroundshapes"
         android:hint="@string/enter_your_number"
         android:inputType="number"
-        android:maxLength="10"
         android:textColor="@color/black"
-        tools:ignore="TextFields"/>
+        android:maxLength="10"
+        android:textAlignment="center"
+        tools:ignore="TextFields" />
 
     <android.widget.Button
         android:id="@+id/send_otpBtn"
@@ -65,7 +67,8 @@
         android:layout_below="@+id/getPhoneNumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:background="@color/main_theme"
+        android:background="@drawable/backgroundshapes"
+        android:backgroundTint="@color/main_theme"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="@string/send_otp"
@@ -80,6 +83,6 @@
         android:layout_below="@id/send_otpBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:visibility="invisible" />
+        android:visibility="invisible"/>
 
 </RelativeLayout>

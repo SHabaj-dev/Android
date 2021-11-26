@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllChat">
         <activity
+            android:name=".UpdateProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ChatViewLayout"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsProfile"
+            android:exported="false" />
+        <activity
             android:name=".OTP_Verification"
             android:exported="false" />
         <activity

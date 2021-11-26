@@ -18,20 +18,13 @@ public class PagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        switch (position){
-            case 0 :
-                return new chatFragment();
-
-            case 1 :
-                return new statusFragment();
-
-            case 3:
-                return new callFragment();
-
-            default:
-                return null;
+        if(position == 0){
+            return new chatFragment();
+        }else if (position == 1){
+            return new statusFragment();
+        }else{
+            return new callFragment();
         }
-
 
     }
 

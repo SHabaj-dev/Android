@@ -12,8 +12,14 @@
     <string name="save_your_profile">Save Your Profile</string>
     <string name="enter_user_name">Enter User Name</string>
     <string name="save">Save</string>
-    <string name="free_chat">Free Chat</string>
+    <string name="free_chat">All Chat</string>
     <string name="chats">Chats</string>
     <string name="status">Status</string>
     <string name="calls">Calls</string>
+    <string name="profile">Profile</string>
+    <string name="my_profile">My Profile</string>
+    <string name="want_to_update_profile">Want To Update Profile ?</string>
+    <string name="name_displays_here">Name Displays Here</string>
+    <string name="online">Online</string>
+    <string name="status_display_here">Status Display Here</string>
 </resources>
