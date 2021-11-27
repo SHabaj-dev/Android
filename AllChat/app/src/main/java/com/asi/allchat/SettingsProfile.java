@@ -3,6 +3,7 @@ package com.asi.allchat;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -50,6 +51,7 @@ public class SettingsProfile extends AppCompatActivity {
         viewUserImageInImageView = findViewById(R.id.viewUserImageInImageView);
         backBtnMyProfile = findViewById(R.id.backBtnOfProfileSettings);
         toolbarOfMyProfile = findViewById(R.id.myProfileToolbar);
+        updateProfile = findViewById(R.id.updateProfile);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -86,6 +88,15 @@ public class SettingsProfile extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+
+        updateProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SettingsProfile.this, UpdateProfile.class);
+                intent.putExtra("userName", viewUserName.getText().toString());
+                startActivity(intent);
             }
         });
 
