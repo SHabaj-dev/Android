@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MovieFlex</string>
+    <string name="movie_name">Movie Name.</string>
+    <string name="dummyText">DummyText</string>
+    <string name="actors">Actors</string>
+    <string name="characters">Characters</string>
+    <string name="devloped_with_by">Made with ❤ by ️</string>
+    <string name="shabaj_dev">SHabaj-dev</string>
+</resources>
