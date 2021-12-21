@@ -1,5 +1,6 @@
 package com.asi.allchat;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -45,7 +46,8 @@ public class chatFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.recyclerView);
 
-        Query query = firebaseFirestore.collection("Users");
+//        Query query = firebaseFirestore.collection("Users");
+        Query query=firebaseFirestore.collection("Users").whereNotEqualTo("uid",firebaseAuth.getUid());
         FirestoreRecyclerOptions<FirebaseModel> allUserName = new FirestoreRecyclerOptions.Builder<FirebaseModel>()
                 .setQuery(query, FirebaseModel.class).build();
 
@@ -69,7 +71,12 @@ public class chatFragment extends Fragment {
                 noteViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(getActivity(), "New Chat is Clicked", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getActivity(), "New Chat is Clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getActivity(), ChatView.class);
+                        intent.putExtra("name",firebaseModel.getName());
+                        intent.putExtra("receiveruid",firebaseModel.getUid());
+                        intent.putExtra("imageuri",firebaseModel.getImage());
+                        startActivity(intent);
                     }
                 });
 
