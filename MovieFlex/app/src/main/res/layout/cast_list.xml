@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/skyBlue"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     app:cardElevation="8dp"
     app:cardMaxElevation="8dp"
     android:layout_margin="8dp">
@@ -16,6 +16,7 @@
         <TextView
             android:id="@+id/textViewActor"
             android:text="@string/dummyText"
+            android:background="@color/skyBlue"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textAlignment="center"
@@ -32,6 +33,7 @@
 
         <TextView
             android:id="@+id/textViewCharacter"
+            android:background="@color/skyBlue"
             android:text="@string/dummyText"
             android:textColor="@color/black"
             android:textSize="18sp"

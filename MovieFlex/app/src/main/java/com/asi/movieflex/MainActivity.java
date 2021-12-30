@@ -1,5 +1,6 @@
 package com.asi.movieflex;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -8,12 +9,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.asi.movieflex.Adapters.HomeRecyclerAdapter;
 import com.asi.movieflex.Listeners.OnMovieClickListener;
 import com.asi.movieflex.Listeners.OnSearchAPIListner;
 import com.asi.movieflex.Models.SearchAPIResponse;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 
 public class MainActivity extends AppCompatActivity implements OnMovieClickListener {
@@ -23,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements OnMovieClickListe
     HomeRecyclerAdapter homeRecyclerAdapter;
     RequestManager requestManager;
     ProgressDialog progressDialog;
+    ImageButton buttonAbout;
 
 
     @Override
@@ -36,6 +44,18 @@ public class MainActivity extends AppCompatActivity implements OnMovieClickListe
 
         searchView = findViewById(R.id.searchView);
         recyclerViewHome = findViewById(R.id.recyclerViewHome);
+
+        buttonAbout = findViewById(R.id.buttonAbout);
+
+        buttonAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         requestManager = new RequestManager(this);
         progressDialog = new ProgressDialog(this);
