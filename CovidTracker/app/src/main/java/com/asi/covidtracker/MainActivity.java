@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -42,6 +45,7 @@ public class MainActivity extends AppCompatActivity  implements AdapterView.OnIt
 
     PieChart mpiechart;
     private RecyclerView recyclerView;
+    ImageView dev_info;
     com.asi.covidtracker.Adapter adapter;
 
     @Override
@@ -64,8 +68,21 @@ public class MainActivity extends AppCompatActivity  implements AdapterView.OnIt
         spinner = findViewById(R.id.spinner);
         mpiechart = findViewById(R.id.piechart);
         recyclerView = findViewById(R.id.recyclerView);
+        dev_info = findViewById(R.id.dev_info);
         modelClassList = new ArrayList<>();
         modelClassList2 = new ArrayList<>();
+
+        FullScreencall();
+
+        dev_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, About_US.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
 
         spinner.setOnItemSelectedListener(this);
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item);
@@ -172,5 +189,17 @@ public class MainActivity extends AppCompatActivity  implements AdapterView.OnIt
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public void FullScreencall() {
+        if(Build.VERSION.SDK_INT > 11 && Build.VERSION.SDK_INT < 19) { // lower api
+            View v = this.getWindow().getDecorView();
+            v.setSystemUiVisibility(View.GONE);
+        } else if(Build.VERSION.SDK_INT >= 19) {
+            //for new api versions.
+            View decorView = getWindow().getDecorView();
+            int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+            decorView.setSystemUiVisibility(uiOptions);
+        }
     }
 }
